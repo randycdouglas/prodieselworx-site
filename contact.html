@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Pro Diesel Worx LLC | Lockport, LA</title>
+  <meta name="description" content="Contact Pro Diesel Worx LLC in Lockport, LA. Call (985) 696-0577 for diesel maintenance and repair. We're always open." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav__brand">
+        <img src="img/logo.png" alt="Pro Diesel Worx LLC" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';" />
+        <span class="nav__brand--text" style="display:none;">PRO DIESEL <span>WORX</span></span>
+      </a>
+      <button class="nav__toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="tel:+19856960577" class="nav__phone">(985) 696-0577</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page hero -->
+  <section class="hero" style="padding:70px 20px;">
+    <div class="container">
+      <h1>Contact <span>Us</span></h1>
+      <p>Have a question or need service? Give us a call or send a message &mdash; we're always ready to help.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Info -->
+        <div class="contact-info">
+          <h2 class="section__title" style="text-align:left;">Get In Touch</h2>
+
+          <div class="contact-item">
+            <div class="icon">&#128222;</div>
+            <div>
+              <h3>Phone</h3>
+              <p><a href="tel:+19856960577">(985) 696-0577</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">&#128205;</div>
+            <div>
+              <h3>Location</h3>
+              <p>Lockport, LA, United States</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">&#128337;</div>
+            <div>
+              <h3>Hours</h3>
+              <p>Always Open</p>
+            </div>
+          </div>
+
+          <!-- TODO: add email once available -->
+          <!--
+          <div class="contact-item">
+            <div class="icon">&#9993;</div>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:info@prodieselworx.com">info@prodieselworx.com</a></p>
+            </div>
+          </div>
+          -->
+
+          <div class="contact-item">
+            <div class="icon">&#128241;</div>
+            <div>
+              <h3>Facebook</h3>
+              <p><a href="https://www.facebook.com/prodieselworx/" target="_blank" rel="noopener">facebook.com/prodieselworx</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div>
+          <h2 class="section__title" style="text-align:left;">Send a Message</h2>
+          <!--
+            NOTE: This form needs a backend/handler to actually send.
+            Easiest option for a static site: sign up at https://formspree.io
+            and replace YOUR_FORM_ID below. Until then the form is inert.
+          -->
+          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label for="message">How can we help?</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Map -->
+      <div class="map-embed">
+        <iframe
+          title="Pro Diesel Worx location - Lockport, LA"
+          src="https://www.google.com/maps?q=Lockport,LA&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="Pro Diesel Worx LLC" onerror="this.style.display='none';" />
+        <p>Full-service diesel maintenance and repair in Lockport, LA. From oil change to overhaul, we can do it all.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+19856960577">(985) 696-0577</a></li>
+          <li>Lockport, LA</li>
+          <li>Always Open</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pro Diesel Worx LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
