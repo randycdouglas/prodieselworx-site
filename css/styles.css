@@ -61,7 +61,7 @@ a:hover { color: var(--red-dark); }
   margin: 0 auto;
 }
 
-.nav__brand img { height: 56px; width: auto; }
+.nav__brand img { height: 88px; width: auto; }
 .nav__brand--text {
   font-weight: 800;
   font-size: 1.25rem;
@@ -325,7 +325,7 @@ a:hover { color: var(--red-dark); }
 .site-footer a:hover { color: var(--red); }
 .site-footer ul { list-style: none; }
 .site-footer ul li { margin-bottom: 8px; }
-.footer-brand img { height: 60px; margin-bottom: 14px; }
+.footer-brand img { height: 90px; margin-bottom: 14px; }
 .footer-bottom {
   text-align: center;
   border-top: 1px solid #2c2c2c;
