@@ -15,5 +15,3 @@ desktop.ini
 # holds the password. Neither belongs in the repo.
 *.pubxml
 *.pubxml.user
-*.csproj.user
-*.user

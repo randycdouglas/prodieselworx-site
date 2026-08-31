@@ -32,3 +32,21 @@
 - `web/wwwroot/robots.txt`
 - `web/wwwroot/sitemap.xml`
 - `CHANGES.md`
+
+## Resend contact form (follow-up)
+- Re-added a full contact form to `contact.html` with name, phone, optional email, optional vehicle/equipment details, and message fields.
+- Added a same-origin `POST /api/contact` endpoint in ASP.NET Core.
+- Integrated the endpoint with Resend's `POST /emails` API without exposing the API key to browser JavaScript.
+- Set the visitor's email as `Reply-To` when provided so the shop can reply directly from its inbox.
+- Added HTML + plain-text email formatting for incoming leads.
+- Added server-side validation, output encoding, honeypot bot filtering, and per-IP rate limiting.
+- Added accessible inline success/error status handling and loading state to the form.
+- Added responsive styling for the new form.
+- Documented the required production environment variables and Resend sender-domain verification.
+
+
+## 2026-08-31 client contact update
+- Updated business phone to **(985) 868-1438** across calls-to-action, metadata, contact-form fallback messages, and server responses.
+- Updated business location to **1737 Grand Caillou Rd, Houma, LA 70363**.
+- Updated embedded Google map and map links to the exact shop address.
+- Updated LocalBusiness structured data with street address and ZIP code.

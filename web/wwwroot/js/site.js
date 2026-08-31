@@ -42,4 +42,71 @@
   } else {
     revealItems.forEach(item => item.classList.add('is-visible'));
   }
+
+
+  const contactForm = document.querySelector('[data-contact-form]');
+  if (contactForm) {
+    const submitButton = contactForm.querySelector('[data-contact-submit]');
+    const submitLabel = contactForm.querySelector('[data-submit-label]');
+    const status = contactForm.querySelector('[data-contact-status]');
+    const fields = contactForm.querySelectorAll('input, textarea');
+
+    const setStatus = (message, type = '') => {
+      if (!status) return;
+      status.textContent = message;
+      status.classList.remove('is-success', 'is-error');
+      if (type) status.classList.add(`is-${type}`);
+    };
+
+    fields.forEach(field => {
+      field.addEventListener('invalid', () => field.setAttribute('aria-invalid', 'true'));
+      field.addEventListener('input', () => {
+        if (field.checkValidity()) field.removeAttribute('aria-invalid');
+      });
+    });
+
+    contactForm.addEventListener('submit', async event => {
+      event.preventDefault();
+      setStatus('');
+      fields.forEach(field => field.removeAttribute('aria-invalid'));
+
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+
+      const formData = new FormData(contactForm);
+      const payload = Object.fromEntries(formData.entries());
+
+      if (submitButton) submitButton.disabled = true;
+      if (submitLabel) submitLabel.textContent = 'Sending…';
+      setStatus('Sending your message…');
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        let data = null;
+        try { data = await response.json(); } catch { /* use fallback below */ }
+
+        if (!response.ok) {
+          const fallback = response.status === 429
+            ? 'Too many messages were submitted from this connection. Please wait a few minutes or call (985) 868-1438.'
+            : 'We couldn’t send your message right now. Please try again or call (985) 868-1438.';
+          throw new Error(data?.message || fallback);
+        }
+
+        contactForm.reset();
+        setStatus(data?.message || 'Thanks — your message was sent. We’ll be in touch as soon as possible.', 'success');
+      } catch (error) {
+        setStatus(error?.message || 'We couldn’t send your message right now. Please call (985) 868-1438.', 'error');
+      } finally {
+        if (submitButton) submitButton.disabled = false;
+        if (submitLabel) submitLabel.textContent = 'Send Message';
+      }
+    });
+  }
 })();
