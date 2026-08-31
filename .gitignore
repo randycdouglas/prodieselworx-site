@@ -5,3 +5,13 @@ desktop.ini
 .vscode/
 *.swp
 *~
+
+# .NET build output
+[Bb]in/
+[Oo]bj/
+.vs/
+
+# Publish profiles can contain the deploy host and user name; the .user file
+# holds the password. Neither belongs in the repo.
+*.pubxml
+*.pubxml.user

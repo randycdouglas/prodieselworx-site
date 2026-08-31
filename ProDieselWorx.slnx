@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/web/">
+    <Project Path="web/ProDieselWorx.Web.csproj" />
+  </Folder>
+</Solution>
