@@ -4,131 +4,276 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pro Diesel Worx LLC | Diesel Repair & Maintenance | Lockport, LA</title>
-  <meta name="description" content="Pro Diesel Worx LLC is a full-fledged diesel maintenance and repair service provider in Lockport, LA. From oil change to overhaul, we can do it all." />
+  <meta name="description" content="Full-service diesel maintenance and repair in Lockport, Louisiana. Pro Diesel Worx handles preventive maintenance, diagnostics, electrical work, brakes, suspension, engine repair and overhauls." />
+  <meta name="theme-color" content="#111111" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pro Diesel Worx LLC | Diesel Done Right" />
+  <meta property="og:description" content="From oil changes to engine overhauls, Pro Diesel Worx provides full-service diesel repair and maintenance in Lockport, LA." />
+  <meta property="og:url" content="https://prodieselworx.com/" />
+  <meta property="og:image" content="https://prodieselworx.com/img/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://prodieselworx.com/" />
+  <link rel="icon" href="img/logo.png" type="image/png" />
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/site.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "Pro Diesel Worx LLC",
+    "url": "https://prodieselworx.com/",
+    "telephone": "+1-985-696-0577",
+    "image": "https://prodieselworx.com/img/logo.png",
+    "description": "Full-service diesel maintenance and repair in Lockport, Louisiana.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lockport",
+      "addressRegion": "LA",
+      "addressCountry": "US"
+    },
+    "sameAs": ["https://www.facebook.com/prodieselworx/"]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header -->
-  <header class="site-header">
-    <nav class="nav">
-      <a href="index.html" class="nav__brand">
-        <!-- Replace img/logo.png with the real logo file -->
-        <img src="img/logo.png" alt="Pro Diesel Worx LLC" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';" />
-        <span class="nav__brand--text" style="display:none;">PRO DIESEL <span>WORX</span></span>
+  <div class="utility-bar">
+    <div class="container utility-bar__inner">
+      <span>Diesel repair &amp; maintenance • Lockport, Louisiana</span>
+      <a href="tel:+19856960577" aria-label="Call Pro Diesel Worx at 985-696-0577">Always open • (985) 696-0577</a>
+    </div>
+  </div>
+
+  <header class="site-header" data-header>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html" class="nav__brand" aria-label="Pro Diesel Worx home">
+        <img src="img/logo.png" width="1956" height="804" alt="Pro Diesel Worx LLC" />
       </a>
-      <button class="nav__toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
-      <ul class="nav__links" id="navLinks">
+
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="navLinks" data-nav-links>
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="tel:+19856960577" class="nav__phone">(985) 696-0577</a></li>
+        <li><a href="tel:+19856960577" class="nav__phone"><span>Call Now</span> (985) 696-0577</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <h1>Diesel Done <span>Right</span></h1>
-      <p>A full-fledged diesel maintenance and repair service provider. From oil change to overhaul, we can do it all.</p>
-      <a href="tel:+19856960577" class="btn">Call Now</a>
-      <a href="contact.html" class="btn btn--outline">Get a Quote</a>
-    </div>
-  </section>
+  <main id="main">
+    <section class="hero">
+      <div class="hero__texture" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="eyebrow">Full-Service Diesel Repair • Lockport, LA</p>
+          <h1>Diesel Done <span>Right.</span></h1>
+          <p class="hero__lead">From routine maintenance to major engine work, Pro Diesel Worx is built to keep diesel trucks and equipment working when you need them.</p>
+          <div class="hero__actions">
+            <a href="tel:+19856960577" class="btn btn--primary">
+              <span class="btn__icon" aria-hidden="true">☎</span>
+              Call (985) 696-0577
+            </a>
+            <a href="#services" class="btn btn--ghost">View Services</a>
+          </div>
+          <div class="hero__mini-proof" aria-label="Business highlights">
+            <span><strong>Always</strong> Open</span>
+            <span><strong>Full-Service</strong> Diesel</span>
+            <span><strong>Local</strong> Lockport Shop</span>
+          </div>
+        </div>
 
-  <!-- Services -->
-  <section class="section section--light" id="services">
-    <div class="container">
-      <h2 class="section__title">Our Services</h2>
-      <p class="section__subtitle">Whatever your diesel needs &mdash; light maintenance to major repair &mdash; our team has you covered.</p>
-      <div class="services">
-        <div class="service-card">
-          <h3>Preventive Maintenance</h3>
-          <p>Oil changes, fluid service, filters, and scheduled upkeep to keep your engine running strong and avoid costly breakdowns.</p>
-        </div>
-        <div class="service-card">
-          <h3>Engine Diagnostics</h3>
-          <p>Modern diagnostic equipment to quickly pinpoint issues, read fault codes, and get to the root of the problem.</p>
-        </div>
-        <div class="service-card">
-          <h3>Engine Repair &amp; Overhaul</h3>
-          <p>From minor repairs to complete engine overhauls, we handle the heavy work with expertise you can trust.</p>
-        </div>
-        <div class="service-card">
-          <h3>Brakes &amp; Suspension</h3>
-          <p>Inspection, repair, and replacement of brake and suspension components to keep you safe on the road.</p>
-        </div>
-        <div class="service-card">
-          <h3>Electrical &amp; Systems</h3>
-          <p>Troubleshooting and repair of starting, charging, and electrical systems on your diesel vehicle or equipment.</p>
-        </div>
-        <div class="service-card">
-          <h3>General Repair</h3>
-          <p>If it runs on diesel, we can work on it. Give us a call and let us know what you need.</p>
+        <div class="hero__visual reveal reveal--delay" aria-label="Pro Diesel Worx capabilities">
+          <div class="hero__logo-panel">
+            <div class="hero__logo-glow" aria-hidden="true"></div>
+            <img src="img/logo.png" width="1956" height="804" alt="" aria-hidden="true" />
+          </div>
+          <div class="hero__service-stack">
+            <div><span>01</span><strong>Maintenance</strong></div>
+            <div><span>02</span><strong>Diagnostics</strong></div>
+            <div><span>03</span><strong>Repair</strong></div>
+            <div><span>04</span><strong>Overhaul</strong></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About -->
-  <section class="section section--dark" id="about">
-    <div class="container">
-      <div class="about-grid">
+    <section class="capability-strip" aria-label="Pro Diesel Worx service highlights">
+      <div class="container capability-strip__grid">
+        <div class="capability-strip__item"><span class="capability-strip__mark">✓</span><span><strong>Preventive Maintenance</strong><small>Keep downtime from becoming a bigger problem.</small></span></div>
+        <div class="capability-strip__item"><span class="capability-strip__mark">✓</span><span><strong>Diesel Diagnostics</strong><small>Find the problem before replacing parts.</small></span></div>
+        <div class="capability-strip__item"><span class="capability-strip__mark">✓</span><span><strong>Major Repairs</strong><small>From component repair to complete overhaul.</small></span></div>
+      </div>
+    </section>
+
+    <section class="section section--light" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow eyebrow--dark">What We Do</p>
+            <h2>One Shop. Serious Diesel Capability.</h2>
+          </div>
+          <p>Whether you need routine service, troubleshooting, or major mechanical work, call Pro Diesel Worx and tell us what you're dealing with.</p>
+        </div>
+
+        <div class="services">
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <span class="service-card__number">01</span>
+            <h3>Preventive Maintenance</h3>
+            <p>Oil changes, filters, fluids, inspections and scheduled upkeep designed to keep your diesel running strong.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 17h16M6 17V9h12v8M8 9V6h8v3M9 13h2M13 13h2"/></svg>
+            </div>
+            <span class="service-card__number">02</span>
+            <h3>Engine Diagnostics</h3>
+            <p>Fault-code reading and troubleshooting to help identify the actual cause of performance and drivability problems.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5-5L12 3.6 9.6 6 7.3 3.7a4 4 0 0 0 5 5L5 16l3 3 7.3-7.3a4 4 0 0 0 5-5L18 9l-2.4-2.4 2.3-2.3a4 4 0 0 0-3.2 2z"/></svg>
+            </div>
+            <span class="service-card__number">03</span>
+            <h3>Engine Repair &amp; Overhaul</h3>
+            <p>From targeted repairs to complete engine overhauls, we handle the heavy work when maintenance isn't enough.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/><path d="M4 17H2V9h3l2-4h8l3 4h4v8h-2M10 17h4M7 9h10"/></svg>
+            </div>
+            <span class="service-card__number">04</span>
+            <h3>Brakes &amp; Suspension</h3>
+            <p>Inspection and repair of brake and suspension components to restore safe, confident operation.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 10-13h-7z"/></svg>
+            </div>
+            <span class="service-card__number">05</span>
+            <h3>Electrical &amp; Systems</h3>
+            <p>Troubleshooting and repair for starting, charging and other electrical-system problems on diesel vehicles and equipment.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 7h18M5 7l2-4h10l2 4M5 7v14h14V7M8 11h8M8 15h5"/></svg>
+            </div>
+            <span class="service-card__number">06</span>
+            <h3>General Diesel Repair</h3>
+            <p>If it runs on diesel, give us a call. Tell us what it's doing and we'll help determine the right next step.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark section--angled" id="about">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow">About Pro Diesel Worx</p>
+          <h2>From Oil Change to Overhaul.</h2>
+          <p class="about-copy__lead">Pro Diesel Worx LLC is a full-service diesel maintenance and repair provider based in Lockport, Louisiana.</p>
+          <p>Our goal is simple: diagnose the problem, handle the repair, and help get your truck or equipment back to work. Routine service or major mechanical work, you can start with one call.</p>
+          <div class="about-points">
+            <div><span>✓</span><p><strong>Broad capability</strong><br />Maintenance through major repair.</p></div>
+            <div><span>✓</span><p><strong>Diesel focused</strong><br />Work centered on diesel vehicles and equipment.</p></div>
+            <div><span>✓</span><p><strong>Call anytime</strong><br />Pro Diesel Worx is listed as always open.</p></div>
+          </div>
+          <a href="contact.html" class="text-link">Contact Pro Diesel Worx <span>→</span></a>
+        </div>
+
+        <div class="about-visual reveal reveal--delay" aria-hidden="true">
+          <div class="industrial-card">
+            <div class="industrial-card__topline">PRO DIESEL WORX // LOCKPORT, LA</div>
+            <div class="industrial-card__center">
+              <span class="industrial-card__big">DIESEL</span>
+              <span class="industrial-card__slash"></span>
+              <span class="industrial-card__small">MAINTENANCE<br />DIAGNOSTICS<br />REPAIR</span>
+            </div>
+            <div class="industrial-card__bottom">
+              <span>985</span><strong>696-0577</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--steps">
+      <div class="container">
+        <div class="section-heading section-heading--center reveal">
+          <div>
+            <p class="eyebrow eyebrow--dark">Need Service?</p>
+            <h2>Start With a Call.</h2>
+          </div>
+          <p>Don't waste time guessing. Give us the basics and we'll help you figure out the next move.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card reveal"><span>1</span><h3>Call Us</h3><p>Reach Pro Diesel Worx directly at (985) 696-0577.</p></div>
+          <div class="step-card reveal"><span>2</span><h3>Describe the Issue</h3><p>Tell us what you're working with and what the vehicle or equipment is doing.</p></div>
+          <div class="step-card reveal"><span>3</span><h3>Get the Next Step</h3><p>We'll help determine what makes sense from there.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-band__inner reveal">
         <div>
-          <h2 class="section__title" style="text-align:left;">About Pro Diesel Worx</h2>
-          <p>Pro Diesel Worx LLC is a <span class="highlight">full-fledged diesel maintenance and repair service provider</span> based in Lockport, Louisiana.</p>
-          <p>From oil change to overhaul, we do it all. Our focus is honest work, quality repairs, and getting you back on the road as fast as possible.</p>
-          <p>Give us a call &mdash; we're always ready to help with whatever your diesel needs.</p>
-          <a href="contact.html" class="btn" style="margin-top:12px;">Contact Us</a>
+          <p class="eyebrow">Need Diesel Repair?</p>
+          <h2>Let's Get It Back to Work.</h2>
+          <p>Call Pro Diesel Worx in Lockport, Louisiana.</p>
         </div>
-        <div class="about-img">
-          <!-- Optional: drop a shop/truck photo at img/about.jpg -->
-          <img src="img/about.jpg" alt="Pro Diesel Worx shop" onerror="this.parentElement.style.display='none';" />
+        <div class="cta-band__actions">
+          <a href="tel:+19856960577" class="btn btn--white">(985) 696-0577</a>
+          <a href="contact.html" class="btn btn--dark">Contact Details</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- CTA -->
-  <section class="cta-band">
-    <div class="container">
-      <h2>Ready to Get Your Diesel Serviced?</h2>
-      <p>Call us today &mdash; we're always open.</p>
-      <a href="tel:+19856960577" class="btn">(985) 696-0577</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="site-footer">
-    <div class="footer-grid">
+    <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="img/logo.png" alt="Pro Diesel Worx LLC" onerror="this.style.display='none';" />
-        <p>Full-service diesel maintenance and repair in Lockport, LA. From oil change to overhaul, we can do it all.</p>
+        <div class="footer-brand__logo"><img src="img/logo.png" width="1956" height="804" alt="Pro Diesel Worx LLC" /></div>
+        <p>Full-service diesel maintenance and repair in Lockport, Louisiana. From oil change to overhaul, we can do it all.</p>
       </div>
       <div>
-        <h4>Quick Links</h4>
+        <h3>Navigate</h3>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h3>Contact</h3>
         <ul>
           <li><a href="tel:+19856960577">(985) 696-0577</a></li>
           <li>Lockport, LA</li>
           <li>Always Open</li>
+          <li><a href="https://www.facebook.com/prodieselworx/" target="_blank" rel="noopener noreferrer">Facebook ↗</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="container footer-bottom">
       <p>&copy; 2026 Pro Diesel Worx LLC. All rights reserved.</p>
+      <p>Diesel maintenance &amp; repair • Lockport, Louisiana</p>
     </div>
   </footer>
 
+  <a class="mobile-call" href="tel:+19856960577"><span aria-hidden="true">☎</span> Call Pro Diesel Worx</a>
 </body>
 </html>
