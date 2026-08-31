@@ -16,4 +16,6 @@ desktop.ini
 *.pubxml
 *.pubxml.user
 
+# Local production configuration / secrets
 *.csproj.user
+web/web.config.production

@@ -9,4 +9,24 @@
 
   <!-- No package references: the site is static HTML served by the framework. -->
 
+  <!--
+    Security model for production publishing:
+      * web.config is safe to commit and contains no Resend secret.
+      * web.config.production is local-only and ignored by Git.
+      * When publishing locally, the target below replaces the published
+        web.config with web.config.production if that local file exists.
+
+    This keeps the Resend API key out of Git while still allowing the deployed
+    IIS site to read the values directly from web.config.
+  -->
+  <Target Name="UseLocalProductionWebConfig"
+          AfterTargets="Publish"
+          Condition="Exists('$(MSBuildProjectDirectory)\web.config.production')">
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\web.config.production"
+          DestinationFiles="$(PublishDir)web.config"
+          OverwriteReadOnlyFiles="true" />
+    <Message Importance="high"
+             Text="Using local ignored web.config.production as the published web.config." />
+  </Target>
+
 </Project>

@@ -50,3 +50,10 @@
 - Updated business location to **1737 Grand Caillou Rd, Houma, LA 70363**.
 - Updated embedded Google map and map links to the exact shop address.
 - Updated LocalBusiness structured data with street address and ZIP code.
+
+## Production configuration security
+- Added a local-only `web/web.config.production` for Resend/contact-form secrets.
+- Added `web/web.config.production` and `*.csproj.user` to `.gitignore`.
+- Kept the committed `web/web.config` secret-free.
+- Added an MSBuild post-publish target that automatically replaces the published
+  `web.config` with the ignored `web.config.production` when publishing locally.

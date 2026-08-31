@@ -110,3 +110,25 @@ These were intentionally not invented. Add them when the client provides accurat
 4. Exact makes, engines, truck classes, or equipment types serviced
 5. Warranty or workmanship claims
 6. Customer testimonials / reviews
+
+## Production Resend configuration
+
+The committed `web/web.config` intentionally contains no secrets.
+
+For a production publish, edit the local file:
+
+`web/web.config.production`
+
+Fill in:
+
+- `RESEND_API_KEY` — the Resend API key for `prodieselworx.com`
+- `RESEND_FROM_EMAIL` — defaults to `Pro Diesel Worx Website <website@prodieselworx.com>`
+- `CONTACT_TO_EMAIL` — the mailbox that should receive contact-form submissions
+
+`web.config.production` is ignored by Git and must never be committed.
+
+When you publish the project locally with Visual Studio or `dotnet publish`, the
+project automatically uses `web.config.production` as the `web.config` in the
+publish output. A build/deploy performed only from GitHub will not have access to
+this ignored file, so use a local publish for the secret-bearing production build
+unless the hosting platform stores these values separately.
